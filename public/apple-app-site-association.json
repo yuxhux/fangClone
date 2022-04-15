@@ -1,0 +1,56 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "CS4X329SHV.com.mars.option1",
+        "paths": [
+          "/*"
+        ],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Match all routes"
+          }
+        ]
+      },
+      {
+        "appID": "WBZ6T2AKNS.mobi.com-ackapp-mobitest",
+        "paths": [
+          "/*"
+        ],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Match all routes"
+          }
+        ]
+      },
+      {
+        "appID": "CS4X329SHV.com.mobi.atbsso",
+        "paths": [
+          "/*"
+        ],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Match all routes"
+          }
+        ]
+      },
+
+      {
+        "appID": "CS4X329SHV.com.mars.Option2",
+        "paths": [
+          "/*"
+        ],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Match all routes"
+          }
+        ]
+      }
+    ]
+  }
+}
