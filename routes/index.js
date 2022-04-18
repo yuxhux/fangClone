@@ -15,6 +15,9 @@ router.get('/mobi', function(req, res, next) {
 router.get('/button', function(req, res, next) {
   res.sendFile(path.join(__dirname, "../html/button.html"))
 });
+router.post('/button', function(req, res, next) {
+  res.sendFile(path.join(__dirname, "../html/button.html"))
+});
 router.get('/.well-known/apple-app-site-association', function(req, res, next) {
   let content = require("../public/apple-app-site-association.json")
   res.setHeader('content-type', 'text/plain');

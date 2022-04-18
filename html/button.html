@@ -5,12 +5,41 @@
     <title>Title</title>
 </head>
 <body>
-<a href="https://redirect.ackapp.com/" id="bwm-link">Buy with Mobi</a>
+<h4 id="PCKSCodeVerifier"></h4>
+<h4 id="PCKSAuthCode"></h4>
+<h4 id="AuthCookie"></h4>
+<br/><br/>
+<a href="javascript:;" id="bwm-links" onclick="setStorage()">Set Auth Storage</a>
+<a href="javascript:;" onclick="setAuthCookie()">Set Auth Cookie</a>
 <script src="./javascripts/bwcheck.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="./javascripts/script.js"></script>
-<script>
-    sessionStorage.setItem("Code", "abc")
+<script type="text/javascript">
+    $(function() {
+        getStorage()
+        getAuthCookie()
+    })
+    function getStorage(){
+        $("#PCKSCodeVerifier").html("PCKSCodeVerifier: " + window.localStorage.getItem("PCKSCodeVerifier") || "None")
+        $("#PCKSAuthCode").html("PCKSAuthCode: " + window.localStorage.getItem("PCKSAuthCode") || "None")
+    }
+    function setStorage(){
+        let randomNumber  = Math.floor(1000 + Math.random() * 9000)
+        window.localStorage.setItem("PCKSCodeVerifier", "Verify-" + randomNumber)
+        window.localStorage.setItem("PCKSAuthCode", "Auth-" + randomNumber)
+        window.sessionStorage.setItem("PCKSCodeVerifier", "Verify-" + randomNumber)
+        window.sessionStorage.setItem("PCKSAuthCode", "Auth-" + randomNumber)
+        getStorage()
+    }
+    function setAuthCookie(){
+        let randomNumber  = Math.floor(1000 + Math.random() * 9000)
+        document.cookie = "username=Amazon-" + randomNumber
+        getAuthCookie()
+    }
+    function getAuthCookie(){
+        $("#AuthCookie").html("AuthCookie: " + document.cookie || "None")
+    }
+
 
 
 </script>
